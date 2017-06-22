@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crop: MyString
+  qnty: 1
+  deadline: 2017-06-22
+
+two:
+  crop: MyString
+  qnty: 1
+  deadline: 2017-06-22

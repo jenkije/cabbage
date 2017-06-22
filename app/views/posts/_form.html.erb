@@ -1,0 +1,32 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :crop %>
+    <%= form.text_field :crop, id: :post_crop %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnty %>
+    <%= form.number_field :qnty, id: :post_qnty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.date_select :deadline, id: :post_deadline %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
